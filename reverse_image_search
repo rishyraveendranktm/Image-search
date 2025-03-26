@@ -1,0 +1,25 @@
+import webbrowser
+import urllib.parse
+
+def google_reverse_image_search(image_path):
+    search_url = "https://www.google.com/searchbyimage?image_url=" + urllib.parse.quote(image_path)
+    webbrowser.open(search_url)
+
+def pimeyes_reverse_image_search():
+    search_url = "https://pimeyes.com/en"
+    webbrowser.open(search_url)
+
+def main():
+    print("Reverse Image Search Script")
+    image_path = input("Enter the image URL (for Google Search) or upload manually to PimEyes: ")
+    
+    print("Opening Google Reverse Image Search...")
+    google_reverse_image_search(image_path)
+    
+    print("Opening PimEyes for Manual Upload...")
+    pimeyes_reverse_image_search()
+    
+    print("Please upload the image manually on PimEyes when the browser opens.")
+
+if __name__ == "__main__":
+    main()
